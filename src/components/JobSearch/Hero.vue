@@ -21,8 +21,8 @@
 </template>
 
 <script>
-import HeadLine from "@/components/HeadLine.vue";
-import JobSearchForm from "@/components/JobSearchForm.vue";
+import HeadLine from "@/components/JobSearch/HeadLine.vue";
+import JobSearchForm from "@/components/JobSearch/JobSearchForm.vue";
 export default {
   name: "HeroSec",
   components: {

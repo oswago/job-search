@@ -1,42 +1,42 @@
-import { mount } from "@vue/test-utils";
 import SubNav from "@/components/Nav/SubNav";
+import { render } from "vue";
 
 describe("Subnav", () => {
+  const renderThesubNav = (routeName) => {
+    render(SubNav, {
+      global: {
+        mocks: {
+          name: routeName,
+        },
+        stubs: {
+          FontAwesomeIcon: true,
+        },
+      },
+      data() {
+        return {
+          onJobResultsPage: true,
+        };
+      },
+    });
+  };
+
   describe("when user is on job page", () => {
     it("displays job count", () => {
-      const wrapper = mount(SubNav, {
-        global: {
-          stubs: {
-            FontAwesomeIcon: true,
-          },
-        },
-        data() {
-          return {
-            onJobResultsPage: true,
-          };
-        },
-      });
-      const jobCount = wrapper.find("[data-test='job-count']");
-      expect(jobCount.exists()).toBe(true);
+      const routeName = "JobResults";
+      renderThesubNav(routeName);
+
+      const jobCount = screen.getByText("1653");
+      expect(jobCount).toBeInTheDocument();
     });
   });
 
   describe("when user is not on  job page", () => {
-    it("displays job count", () => {
-      const wrapper = mount(SubNav, {
-        global: {
-          stubs: {
-            FontAwesomeIcon: true,
-          },
-        },
-        data() {
-          return {
-            onJobResultsPage: false,
-          };
-        },
-      });
-      const jobCount = wrapper.find("[data-test='job-count']");
-      expect(jobCount.exists()).toBe(false);
+    it("does not displays job count", () => {
+      const routeName = "Home";
+      renderThesubNav(routeName);
+
+      const jobCount = screen.queryByText("1653");
+      expect(jobCount).not.toBeInTheDocument();
     });
   });
 });

@@ -1,6 +1,6 @@
 import { nextTick } from "vue";
 import { mount } from "@vue/test-utils";
-import HeadLine from "@/components/HeadLine";
+import HeadLine from "@/components/JobSearch/HeadLine";
 import { setInterval } from "core-js";
 
 describe("HeadLine", () => {

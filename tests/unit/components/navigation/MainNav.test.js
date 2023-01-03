@@ -1,8 +1,27 @@
 import { shallowMount } from "@vue/test-utils";
 import MainNav from "@/components/Nav/MainNav.vue";
+import { render } from "vue";
+import { RouterLinkStub } from "@vue/test-utils";
 
 describe("MainNav", () => {
+  const renderMainNav = () => {
+    const $route = {
+      name: "Home",
+    };
+    render(MainNav, {
+      global: {
+        mocks: {
+          $route,
+        },
+        stubs: {
+          FonyAwesomeIcon: true,
+          RouterLink: RouterLinkStub,
+        },
+      },
+    });
+  };
   it("displays company name", () => {
+    renderMainNav();
     const wrapper = shallowMount(MainNav);
     expect(wrapper.text()).toMatch("Afwit Careers");
   });

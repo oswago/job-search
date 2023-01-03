@@ -4,18 +4,25 @@
       <div
         class="flex flex-nowrap h-full px-8 mx-auto border-b border-solid border-brand-grey-1"
       >
-        <a :href="url" class="flex items-center h-full text-xl">{{
-          company
-        }}</a>
+        <router-link
+          :to="{ name: 'Home' }"
+          class="flex items-center h-full text-xl"
+        >
+          {{ company }}
+        </router-link>
         <nav class="h-full ml-12">
           <ul class="flex h-full p-0 m-0 list-none">
             <li
               v-for="menuItem in menuItems"
-              :key="menuItem"
+              :key="menuItem.text"
               data-test="main-nav-list-item"
               class="flex h-full ml-9 first:ml-0"
             >
-              <a href="/" class="flex items-center py-2.5">{{ menuItem }}</a>
+              <router-link
+                :to="menuItem.url"
+                class="flex items-center py-2.5"
+                >{{ menuItem.text }}</router-link
+              >
             </li>
           </ul>
         </nav>
@@ -44,7 +51,7 @@
 </template>
 
 <script>
-import ActionButton from "@/components/ActionButton.vue";
+import ActionButton from "@/components/Shared/ActionButton.vue";
 import ProfileImage from "@/components/Nav/ProfileImage.vue";
 import SubNav from "@/components/Nav/SubNav.vue";
 export default {
@@ -53,14 +60,13 @@ export default {
   data() {
     return {
       company: "Afwit Careers",
-      url: "https://careers.google.com",
       menuItems: [
-        "Teams",
-        "Locations",
-        "Life At Afwit",
-        "How we Hire",
-        "Students",
-        "Jobs",
+        { text: "Teams", url: "/" },
+        { text: "Locations", url: "/" },
+        { text: "Life At Afwit", url: "/" },
+        { text: "How we Hire", url: "/" },
+        { text: "Students", url: "/" },
+        { text: "Jobs", url: "jobs/results" },
       ],
       isLoggedIn: false,
     };

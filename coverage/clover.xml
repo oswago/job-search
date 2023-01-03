@@ -1,24 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1669317071246" clover="3.2.0">
-  <project timestamp="1669317071247" name="All files">
-    <metrics statements="75" coveredstatements="75" conditionals="6" coveredconditionals="6" methods="11" coveredmethods="11" elements="92" coveredelements="92" complexity="0" loc="75" ncloc="75" packages="3" files="6" classes="6"/>
-    <package name="components">
-      <metrics statements="24" coveredstatements="24" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-      <file name="ActionButton.vue" path="E:\TUTOR\VUE\job-search\src\components\ActionButton.vue">
-        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="20" count="7" type="stmt"/>
-        <line num="26" count="2" type="stmt"/>
-        <line num="34" count="2" type="stmt"/>
-        <line num="36" count="2" type="stmt"/>
-        <line num="39" count="2" type="stmt"/>
-        <line num="40" count="2" type="stmt"/>
-        <line num="42" count="2" type="stmt"/>
-        <line num="45" count="2" type="stmt"/>
-      </file>
-      <file name="HeadLine.vue" path="E:\TUTOR\VUE\job-search\src\components\HeadLine.vue">
+<coverage generated="1670507866542" clover="3.2.0">
+  <project timestamp="1670507866542" name="All files">
+    <metrics statements="76" coveredstatements="73" conditionals="6" coveredconditionals="4" methods="13" coveredmethods="11" elements="95" coveredelements="88" complexity="0" loc="76" ncloc="76" packages="4" files="6" classes="6"/>
+    <package name="components.JobSearch">
+      <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="HeadLine.vue" path="E:\TUTOR\VUE\job-search\src\components\JobSearch\HeadLine.vue">
         <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
@@ -36,29 +22,30 @@
       </file>
     </package>
     <package name="components.Nav">
-      <metrics statements="46" coveredstatements="46" conditionals="6" coveredconditionals="6" methods="6" coveredmethods="6"/>
+      <metrics statements="47" coveredstatements="44" conditionals="6" coveredconditionals="4" methods="8" coveredmethods="6"/>
       <file name="MainNav.vue" path="E:\TUTOR\VUE\job-search\src\components\Nav\MainNav.vue">
-        <metrics statements="20" coveredstatements="20" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <metrics statements="21" coveredstatements="21" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="65" count="1" type="stmt"/>
-        <line num="67" count="1" type="stmt"/>
-        <line num="70" count="1" type="stmt"/>
-        <line num="71" count="1" type="stmt"/>
-        <line num="72" count="1" type="stmt"/>
-        <line num="75" count="1" type="stmt"/>
-        <line num="78" count="1" type="stmt"/>
-        <line num="79" count="1" type="stmt"/>
         <line num="82" count="1" type="stmt"/>
-        <line num="85" count="1" type="stmt"/>
+        <line num="84" count="1" type="stmt"/>
+        <line num="87" count="1" type="stmt"/>
+        <line num="88" count="1" type="stmt"/>
         <line num="89" count="1" type="stmt"/>
-        <line num="93" count="7" type="stmt"/>
-        <line num="94" count="7" type="stmt"/>
-        <line num="95" count="7" type="stmt"/>
-        <line num="96" count="7" type="stmt"/>
-        <line num="102" count="42" type="stmt"/>
-        <line num="123" count="1" type="stmt"/>
+        <line num="92" count="1" type="stmt"/>
+        <line num="95" count="1" type="stmt"/>
+        <line num="98" count="1" type="stmt"/>
+        <line num="101" count="1" type="stmt"/>
+        <line num="105" count="7" type="stmt"/>
+        <line num="106" count="7" type="stmt"/>
+        <line num="107" count="7" type="stmt"/>
+        <line num="108" count="7" type="stmt"/>
+        <line num="109" count="7" type="stmt"/>
+        <line num="117" count="7" type="stmt"/>
+        <line num="121" count="42" type="stmt"/>
+        <line num="129" count="42" type="stmt"/>
+        <line num="149" count="1" type="stmt"/>
       </file>
       <file name="ProfileImage.vue" path="E:\TUTOR\VUE\job-search\src\components\Nav\ProfileImage.vue">
         <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
@@ -75,11 +62,11 @@
         <line num="31" count="2" type="stmt"/>
       </file>
       <file name="SubNav.vue" path="E:\TUTOR\VUE\job-search\src\components\Nav\SubNav.vue">
-        <metrics statements="15" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <metrics statements="15" coveredstatements="12" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="4" count="2" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
         <line num="8" count="2" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
         <line num="18" count="2" type="stmt"/>
         <line num="20" count="2" type="stmt"/>
         <line num="23" count="2" type="stmt"/>
@@ -88,8 +75,25 @@
         <line num="28" count="2" type="stmt"/>
         <line num="31" count="2" type="stmt"/>
         <line num="35" count="2" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="45" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.Shared">
+      <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="ActionButton.vue" path="E:\TUTOR\VUE\job-search\src\components\Shared\ActionButton.vue">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="20" count="7" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
         <line num="40" count="2" type="stmt"/>
-        <line num="41" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="42" count="2" type="stmt"/>
         <line num="45" count="2" type="stmt"/>
       </file>
     </package>
