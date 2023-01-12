@@ -51,6 +51,8 @@
 </template>
 
 <script>
+import { mapActions, mapState } from "pinia";
+import { useUserStore } from "@/stores/user";
 import ActionButton from "@/components/Shared/ActionButton.vue";
 import ProfileImage from "@/components/Nav/ProfileImage.vue";
 import SubNav from "@/components/Nav/SubNav.vue";
@@ -61,17 +63,17 @@ export default {
     return {
       company: "Afwit Careers",
       menuItems: [
-        { text: "Teams", url: "/" },
+        { text: "Teams", url: "/teams" },
         { text: "Locations", url: "/" },
         { text: "Life At Afwit", url: "/" },
         { text: "How we Hire", url: "/" },
         { text: "Students", url: "/" },
         { text: "Jobs", url: "jobs/results" },
       ],
-      isLoggedIn: false,
     };
   },
   computed: {
+    ...mapState(useUserStore, ["isLoggedIn"]), //exposes property userStore
     headerHeightClass() {
       return {
         "h-16": !this.isLoggedIn,
@@ -80,12 +82,7 @@ export default {
     },
   },
   methods: {
-    loginUser() {
-      this.isLoggedIn = true;
-    },
-    logOut() {
-      this.isLoggedIn = false;
-    },
+    ...mapActions(useUserStore, ["loginUser", "logOut"]),
   },
 };
 </script>

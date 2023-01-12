@@ -1,5 +1,6 @@
 <template>
   <div>Job Page id is {{ currentJobId }}</div>
+  <div></div>
 </template>
 
 <script>
